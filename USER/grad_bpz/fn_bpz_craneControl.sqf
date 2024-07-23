@@ -161,7 +161,12 @@ private _ehRU = addUserActionEventHandler ["defaultAction", "Activate", {
 			{
 				_object ropeDetach _x#0;
 			} forEach _ropes;
+
+			private _hook = _vehicle getVariable ["gradTnT_bpz_hookVehicle", objNull];
+			deleteVehicle _hook;
+
 			_vehicle setVariable ["grad_bpz_magnetAttached", objNull, true];
+			_vehicle setVariable ["gradTnT_bpz_hookVehicle", objNull, true];
 			[["Detached object.", 1.5, [1, 1, 1, 1]], true] call CBA_fnc_notify;
 
 			[_object, "surrender_fall"] remoteExec ["say3D"];

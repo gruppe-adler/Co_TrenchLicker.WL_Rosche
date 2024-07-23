@@ -1,4 +1,4 @@
-params ["_positionHookASL", "_hookObj"];
+params ["_positionHookASL", ["_hookObj", objNull]];
 
 private _nearestDragonTooth = lineIntersectsWith [_positionHookASL, _positionHookASL vectorAdd [0,0,-1], _hookObj];
 
