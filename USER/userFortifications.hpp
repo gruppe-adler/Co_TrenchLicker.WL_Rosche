@@ -11,4 +11,13 @@ demolitionTimeFactor = 1.4;
 
 class Fortifications {
 
+	 class jbad_ramp {
+            boundingBoxSize = 1;
+            canFloat = 1;
+            canCollide = 1;
+            size = 1;
+            demolitionTime = 10;
+			buildTime = 1;
+        };
+
 };
