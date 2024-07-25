@@ -5,7 +5,7 @@ if (!isServer) exitWith {
 	[[_position, _size, _isSecondDepot], "user\scripts\ammo.sqf"] remoteExec ["BIS_fnc_execVM", 2];
 };
 
-private _ammoContainers = nearestObjects [_position, ["Land_Cargo40_military_green_F"], 200];
+private _ammoContainers = nearestObjects [_position, ["Land_Cargo20_military_green_F"], 200];
 
 {
 	private _position = getPosATL _x;
@@ -14,7 +14,7 @@ private _ammoContainers = nearestObjects [_position, ["Land_Cargo40_military_gre
 	
 	// only lower containers shall be replaced
 	if (_position#2 < 1) then {
-		private _ruin = "Land_Cargo40_military_ruins_F" createVehicle [0,0,0];
+		private _ruin = "Land_Cargo20_military_ruins_F" createVehicle [0,0,0];
 		_ruin setPosATL _position;
 		_ruin setDir _dir;
 	};
