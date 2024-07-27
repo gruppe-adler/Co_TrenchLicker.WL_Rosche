@@ -51,7 +51,7 @@ class missionSettings {
 //FUNCTIONS ====================================================================
 class CfgFunctions
 {
-    #include "ETHICSMinefields\THY_ETH_functions.hpp"
+    // #include "ETHICSMinefields\THY_ETH_functions.hpp"
 
 	#include "functions\common\cfgFunctions.hpp"
 	#include "functions\diagnostics\cfgFunctions.hpp"
