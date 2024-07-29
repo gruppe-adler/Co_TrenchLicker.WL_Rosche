@@ -8,6 +8,19 @@ _vehicle addEventHandler ["HandleDamage",{
 	if (_previousdamage + _damage > 0.8 && (_hitpoint in ["hithull"] || _hitpoint == "")) then {
 		_damage = 0.8;
 		// systemchat (("limited to damage: ") + str _damage);
+		
+		// add random hit to another uncritical component
+		private _selection = selectRandom 
+		["hitengine",
+		"hitfuel",
+		"hitltrack",
+		"hitrtrack",
+		"hitturret",
+		"hitgun",
+		"hitcomturret",
+		"hitcomgun"];
+
+		[_unit, _selection, 1] call BIS_fnc_setHitPointDamage;
 	};
 	
 	// systemchat (("end damage: ") + str _damage + "hitpoint: " + str _hitpoint);

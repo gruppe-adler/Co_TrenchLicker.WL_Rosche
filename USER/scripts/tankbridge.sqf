@@ -1,3 +1,4 @@
+/*
 ["jbad_ramp", "init", {
 
 	params ["_ramp"];
@@ -7,5 +8,6 @@
 
 
 }, true, [], true] call CBA_fnc_addClassEventHandler;
+*/
 
 // model = "\jbad_misc\Misc_Ramps\Jbad_Ramp.p3d";

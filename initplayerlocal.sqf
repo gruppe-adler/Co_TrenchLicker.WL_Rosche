@@ -5,4 +5,6 @@ if (didJIP) then {
 ["InitializePlayer", [player,true]] call BIS_fnc_dynamicGroups;
 grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
 
-[] execVM "ETHICSMinefields\fn_ETH_playerLocal.sqf";
+[{
+    [] execVM "USER\scripts\dragontooth_explosion.sqf";
+}, [], 10] call CBA_fnc_waitAndExecute;
